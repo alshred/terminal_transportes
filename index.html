@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal de Transporte</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/media_queries.css">
+    <link rel="stylesheet" href="/styles/alerts.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+       <div class="header-content">
+           <div class="logo">
+               <div class="logo-icon">🚌</div>
+               <div class="logo-text">
+                   <span>Terminal</span>
+                   <small>de Transporte</small>
+               </div>
+           </div>
+           <nav>
+               <ul class="nav" id="nav">
+                   <li><a href="#inicio">Inicio</a></li>
+                   <li><a href="#nosotros">Nosotros</a></li>
+                   <li><a href="#empresas">Empresas</a></li>
+                   <li><a href="#rutas">Rutas</a></li>
+                   <li><a href="#horarios">Horarios</a></li>
+                   <li><a href="#cotizacion">Cotización</a></li>
+                   <li><a href="#compra">Compra</a></li>
+                   <li><a href="#contacto">Contacto</a></li>
+                   <li><a href="#admin" class="admin-btn" onclick="showAdminLogin(event)">🔐 Admin</a></li>
+               </ul>
+           </nav>
+           <button class="menu-toggle" id="menuToggle">☰</button>
+       </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="inicio">
+      <h1>Bienvenido a la Terminal de Transporte</h1>
+      <p>Tu destino está más cerca de lo que imaginas</p>
+      <button class="btn" onclick="document.getElementById('cotizacion').scrollIntoView({behavior: 'smooth'})">
+          Compra tu tiquete ahora
+      </button>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section" id="nosotros">
+        <h2 class="section-title">Nosotros</h2>
+        <p class="section-subtitle">Conoce más sobre nuestra terminal</p>
+        <div class="grid grid-4">
+            <div class="card">
+                <div class="card-icon">🎯</div>
+                <h3>Misión</h3>
+                <p>Conectar personas y lugares con servicios de transporte seguros y eficientes.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">👁️</div>
+                <h3>Visión</h3>
+                <p>Ser la terminal líder en servicios de transporte terrestre en la región.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">⭐</div>
+                <h3>Valores</h3>
+                <p>Seguridad, puntualidad, calidad y compromiso con nuestros usuarios.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">📖</div>
+                <h3>Historia</h3>
+                <p>Más de 30 años brindando servicios de transporte de calidad.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPANIES SECTION -->
+    <section class="section" id="empresas">
+        <h2 class="section-title">Empresas</h2>
+        <p class="section-subtitle">Conoce las empresas transportadoras</p>
+        <div class="grid grid-4">
+            <div class="company-card">
+                <div class="company-logo">🚐</div>
+                <div class="company-info">
+                    <h3>Velotax</h3>
+                    <p>70 años de trayectoria, un legado que perdura</p>
+                    <button class="btn-secondary">Ver más</button>
+                </div>
+            </div>
+            <div class="company-card">
+                <div class="company-logo">🚎</div>
+                <div class="company-info">
+                    <h3>Libertadores</h3>
+                    <p>Trabajamos juntos para llevarte más lejos</p>
+                    <button class="btn-secondary">Ver más</button>
+                </div>
+            </div>
+            <div class="company-card">
+                <div class="company-logo">🚌</div>
+                <div class="company-info">
+                    <h3>Flota La Macarena</h3>
+                    <p>Rapidez y eficiencia en cada trayecto.</p>
+                    <button class="btn-secondary">Ver más</button>
+                </div>
+            </div>
+            <div class="company-card">
+                <div class="company-logo">🚎</div>
+                <div class="company-info">
+                    <h3>Expreso Bolivariano</h3>
+                    <p>Vamos por Colombia</p>
+                    <button class="btn-secondary">Ver más</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROUTES SECTION -->
+    <section class="section" id="rutas">
+        <h2 class="section-title">Rutas Disponibles</h2>
+        <p class="section-subtitle">Consulta nuestras rutas y precios</p>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Origen</th>
+                        <th>Destino</th>
+                        <th>Empresa</th>
+                        <th>Tipo de Vehículo</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bogotá</td>
+                        <td>Medellín</td>
+                        <td>Velotax</td>
+                        <td>Bus Ejecutivo</td>
+                        <td>$85.000 COP</td>
+                    </tr>
+                    <tr>
+                        <td>Cali</td>
+                        <td>Cartagena</td>
+                        <td>Libertadores</td>
+                        <td>Bus Semi-cama</td>
+                        <td>$120.000 COP</td>
+                    </tr>
+                    <tr>
+                        <td>Barranquilla</td>
+                        <td>Bucaramanga</td>
+                        <td>Velotax</td>
+                        <td>Bus Clásico</td>
+                        <td>$75.000 COP</td>
+                    </tr>
+                    <tr>
+                        <td>Medellín</td>
+                        <td>Cali</td>
+                        <td>Flota La Macarena</td>
+                        <td>Bus Ejecutivo</td>
+                        <td>$95.000</td>
+                    </tr>
+                    <tr>
+                        <td>Pereira</td>
+                        <td>Bogotá</td>
+                        <td>Expreso Bolivariano</td>
+                        <td>Bus Semi-cama</td>
+                        <td>$65.000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- SCHEDULES SECTION -->
+    <section class="section" id="horarios">
+       <h2 class="section-title">Horarios</h2>
+       <p class="section-subtitle">Consulta los horarios de salida</p>
+       <div class="grid grid-2">
+           <div class="schedule-card">
+               <h3>Bogotá - Medellín</h3>
+               <p class="route">Velotax</p>
+               <div class="times">
+                   <div class="time">6:00 AM</div>
+                   <div class="time">9:00 AM</div>
+                   <div class="time">12:00 PM</div>
+                   <div class="time">3:00 PM</div>
+                   <div class="time">6:00 PM</div>
+                   <div class="time">9:00 PM</div>
+               </div>
+           </div>
+           <div class="schedule-card">
+               <h3>Cali - Cartagena</h3>
+               <p class="route">Libertadores</p>
+               <div class="times">
+                   <div class="time">7:00 AM</div>
+                   <div class="time">10:00 AM</div>
+                   <div class="time">1:00 PM</div>
+                   <div class="time">4:00 PM</div>
+                   <div class="time">7:00 PM</div>
+                   <div class="time">10:00 PM</div>
+               </div>
+           </div>
+           <div class="schedule-card">
+               <h3>Barranquilla - Bucaramanga</h3>
+               <p class="route">Flota La Macarena</p>
+               <div class="times">
+                   <div class="time">5:30 AM</div>
+                   <div class="time">8:30 AM</div>
+                   <div class="time">11:30 AM</div>
+                   <div class="time">2:30 PM</div>
+                   <div class="time">5:30 PM</div>
+                   <div class="time">8:30 PM</div>
+               </div>
+           </div>
+           <div class="schedule-card">
+               <h3>Medellín - Cali</h3>
+               <p class="route">Expreso Bolivariano</p>
+               <div class="times">
+                   <div class="time">6:30 AM</div>
+                   <div class="time">9:30 AM</div>
+                   <div class="time">12:30 PM</div>
+                   <div class="time">3:30 PM</div>
+                   <div class="time">6:30 PM</div>
+                   <div class="time">9:30 PM</div>
+               </div>
+           </div>                
+       </div>
+    </section>
+
+    <!-- QUOTE SECTION -->
+    <section class="section" id="cotizacion">
+      <h2 class="section-title"
+          style="color: white;">Cotiza tu Viaje</h2>
+      <p class="section-subtitle" 
+         style="color: rgba(255,255,255,0.9);">Calcula el precio de tu boleto</p>
+      <div class="form-container">
+          <form id="quoteForm">
+              <div class="grid grid-2">
+                  <div class="form-group">
+                      <label>Origen</label>
+                      <select id="origen" required>
+                          <option value="">Selecciona una ciudad</option>
+                          <option value="Bogotá">Bogotá</option>
+                          <option value="Medellín">Medellín</option>
+                          <option value="Cali">Cali</option>
+                          <option value="Barranquilla">Barranquilla</option>
+                          <option value="Pereira">Pereira</option>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                      <label>Destino</label>
+                      <select id="destino" required>
+                          <option value="">Selecciona una ciudad</option>
+                          <option value="Medellín">Medellín</option>
+                          <option value="Cali">Cali</option>
+                          <option value="Cartagena">Cartagena</option>
+                          <option value="Bucaramanga">Bucaramanga</option>
+                          <option value="Bogotá">Bogotá</option>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                      <label>Fecha de Viaje</label>
+                      <input type="date" id="fecha" required>
+                  </div>
+                  <div class="form-group">
+                      <label>Número de Pasajeros</label>
+                      <input type="number" id="pasajeros" min="1" max="10" value="1" required>
+                  </div>
+              </div>
+              <button type="submit"
+                      class="btn"
+                      style="width: 100%; margin-top: 1rem;">
+                    Calcular Precio
+              </button>
+              <div id="quoteResult" class="alert"></div>
+          </form>
+      </div>
+    </section>
+
+    <!-- PURCHASE SECTION -->
+    <section class="section" id="compra">
+        <h2 class="section-title">Compra de Boletos</h2>
+        <p class="section-subtitle">Completa tu información para comprar</p>
+        <div class="purchase-grid">
+            <div class="form-container">
+                <h3 style="margin-bottom: 1.5rem; color: var(--primary);">Datos Personales</h3>
+                <form id="purchaseForm">
+                    <div class="form-group">
+                        <label >Nombre Completo</label>
+                        <input type="text" id="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label >Documento de Identidad</label>
+                        <input type="text" id="documento" required>                
+                    </div>
+                    <div class="form-group">
+                        <label >Email</label>                
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label >Teléfono</label>
+                        <input type="tel" id="telefono" required>                
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-container">
+                <h3 style="margin-bottom: 1.5rem; color: var(--primary);">Método de Pago</h3>
+                <div class="payment-option">
+                    <input type="radio" name="payment" id="efectivo" value="efectivo" checked>
+                    <label for="efectivo" style="margin: 0; cursor: pointer;">
+                        <strong>Efectivo</strong><br>
+                        <small>Paga en la terminal al momento de abordar</small>
+                    </label>
+                </div>
+                <div class="payment-option">
+                    <input type="radio" name="payment" id="tarjeta" value="tarjeta">
+                    <label for="tarjeta" style="margin: 0; cursor: pointer;">
+                        <strong>Tarjeta de Crédito/Débito</strong><br>
+                        <small>Pago seguro en línea</small>
+                    </label>
+                </div>
+                <div class="payment-option">
+                    <input type="radio" name="payment" id="transferencia" value="transferencia">
+                    <label for="transferencia" style="margin: 0; cursor: pointer;">
+                        <strong>Transferencia Bancaria</strong><br>
+                        <small>Realiza una transferencia directa</small>
+                    </label>
+                </div>
+                <div class="summary-box">
+                    <h4 style="margin-bottom: 1rem;">Resumen de Compra</h4>
+                    <div class="summary-row">
+                        <span>Ruta:</span>
+                        <span id="resumenRuta">-</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Fecha:</span>
+                        <span id="resumenFecha">-</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Pasajeros:</span>
+                        <span id="resumenPasajeros">-</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total:</span>
+                        <span id="resumenTotal">-</span>
+                    </div>
+                    <button type="button"
+                            class="btn-secondary"
+                            style="width: 100%; margin-top: 1rem;"
+                            onclick="processPurchase()">
+                        Confirmar Compra
+                    </button>
+                    <div id="purchaseResult" class="alert"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section" id="contacto">
+        <h2 class="section-title">Contáctanos</h2>
+        <p class="section-subtitle">Estamos aquí para ayudarte</p>
+        <div class="contact-grid">
+            <div>
+                <h3 style="margin-bottom: 1.5rem; color: var(--primary);">Información de Contacto</h3>
+                <div class="contact-info-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <strong>Dirección</strong>
+                        <p>Calle 12 #34-56, Centro, Ciudad</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <strong>Teléfono</strong>
+                        <p>+57 (1) 234-5678</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-icon">📧</div>
+                    <div>
+                        <strong>Email</strong>
+                        <p>info@terminaltransporte.com</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-icon">🕐</div>
+                    <div>
+                        <strong>Horario de Atención</strong>
+                        <p>Lunes a Domingo: 5:00 AM - 11:00 PM</p>
+                    </div>
+                </div>
+                <div class="map-placeholder">
+                    <iframe src="https://www.google.com/maps/embed?pb=!4v1772381490060!6m8!1m7!1sny8i7Iqq-VztfMoMCq_FbQ!2m2!1d4.597183736150646!2d-74.17628669144673!3f3.9766023239948183!4f16.134902323168163!5f0.7820865974627469" 
+                        height="80%"
+                        width="80%"
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>            
+            </div>
+
+            <div class="form-container">
+                <h3 style="margin-bottom: 1.5rem; color: var(--primary);">Envíanos un Mensaje</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input type="text" id="contactNombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="contactEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Asunto</label>
+                        <input type="text" id="contactAsunto" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Mensaje</label>
+                        <input id="contactMensaje" rows="5" required></textarea>
+                    </div>
+                    <button 
+                            type="submit"
+                            class="btn-secondary"
+                            style="width: 100%;">
+                        Enviar Mensaje
+                    </button>
+                    <div id="contactResult" class="alert"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Sobre Nosotros</h4>
+                    <p>Terminal de Transporte es tu mejor opción para viajar seguro y cómodo por todo el país.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">💼</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#rutas">Rutas</a></li>
+                        <li><a href="#horarios">Horarios</a></li>
+                        <li><a href="#cotizacion">Cotizaciones</a></li>
+                        <li><a href="#compra">Compra de Tiquetes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#nosotros">Sobre Nosotros</a></li>
+                        <li><a href="#empresas">Empresas</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>📍 Calle 12 #34-56, Centro, Ciudad</li>
+                        <li>📞 +57 (1) 234-5678</li>
+                        <li>📧 info@terminaltransporte.com</li>
+                        <li>🕐 Lun - Dom: 5AM - 11PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Terminal de Transporte. Todos los derechos reservados.</p>
+                <p>Diseñado para brindar la mejor experiencia en transporte terrestre.</p>
+                <small>&copy; Desarrollado por: José Alvaro Moreno González</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="/scripts/scripts.js"></script>
+</body>
+</html>
