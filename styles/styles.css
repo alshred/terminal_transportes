@@ -120,7 +120,7 @@ body{
 .hero {
     background: 
         linear-gradient(rgba(30, 58, 138, 0.7), rgba(55, 65, 81, 0.7)),
-        url("/assets/img/hero_bg.jpeg");
+        url("assets/img/hero_bg.jpeg");
         
     background-size: cover;
     background-position: center;
@@ -576,4 +576,5 @@ tbody tr:hover {
     padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     opacity: 0.8;
+
 }
